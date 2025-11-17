@@ -2,8 +2,8 @@
 // 🧠 Introduction to JavaScript
 // ===============================================
 
-// A simple script to understand how JavaScript runs
-// Uncomment the code below to test it step by step.
+// Run this step-by-step to understand how JS executes.
+// (Uncomment to test)
 
 // let js = 'amazing';
 
@@ -11,19 +11,55 @@
 //   alert("JavaScript is FUN!");
 // }
 
-// Logs a simple calculation
-console.log("The Number is: " + (48 + 28 + 23 - 10));
+// Log a simple calculation
+console.log("The Number is:", 48 + 28 + 23 - 10);
 
-// Logs a welcome message
+// Welcome message
 console.log("Welcome To The JavaScript World!!!");
 
+
 // ===============================================
-// Next: Values and Variables
+// 🧩 Values and Variables
 // ===============================================
 
-console.log('Jacob'); // Value
-console.log(23); // Value
+// Direct values
+console.log('Jacob');
+console.log(23);
 
-// The best way to store them into Variables to use them over and over again
-let firstName = 'Jonas'; // Declaring a variable
+// Variables allow re-use and cleaner code
+let firstName = 'Jonas';
 console.log(firstName);
+
+// Valid variable examples
+let jonas_matilda = 'JM';
+let $function = 27;
+let person = 'Jacob';
+let PI = 3.1415; // Constants usually uppercase
+
+// Descriptive variable names
+let myFirstJob = 'Programmer';
+let myCurrentJob = 'Teacher';
+
+// ❌ Not recommended — unclear variable names
+let job1 = 'Programmer';
+let job2 = 'Teacher';
+
+
+// ===============================================
+// 🧩 Data Types
+// ===============================================
+
+// Boolean example
+let javaScriptIsFun = true;
+console.log(javaScriptIsFun);
+
+// typeof operator examples
+console.log(typeof true);
+console.log(typeof javaScriptIsFun);
+console.log(typeof 23);
+console.log(typeof 'Jacob');
+
+
+// ===============================================
+// 🧩 Let, Const and var
+// ===============================================
