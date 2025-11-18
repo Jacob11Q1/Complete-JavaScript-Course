@@ -22,7 +22,7 @@ console.log("Welcome To The JavaScript World!!!");
 // 🧩 Values and Variables
 // ===============================================
 
-// Direct values
+// Direct values (not stored)
 console.log('Jacob');
 console.log(23);
 
@@ -34,7 +34,7 @@ console.log(firstName);
 let jonas_matilda = 'JM';
 let $function = 27;
 let person = 'Jacob';
-let PI = 3.1415; // Constants usually uppercase
+let PI = 3.1415; // constants usually uppercase
 
 // Descriptive variable names
 let myFirstJob = 'Programmer';
@@ -49,17 +49,43 @@ let job2 = 'Teacher';
 // 🧩 Data Types
 // ===============================================
 
-// Boolean example
 let javaScriptIsFun = true;
 console.log(javaScriptIsFun);
 
 // typeof operator examples
-console.log(typeof true);
-console.log(typeof javaScriptIsFun);
-console.log(typeof 23);
-console.log(typeof 'Jacob');
+console.log(typeof true);               // boolean
+console.log(typeof javaScriptIsFun);    // boolean
+console.log(typeof 23);                 // number
+console.log(typeof 'Jacob');            // string
 
 
 // ===============================================
-// 🧩 Let, Const and var
+// 🧩 Let, Const, and Var
 // ===============================================
+
+// 🔹 let → values that CAN change later (mutable)
+let age = 28;
+age = 29; // allowed
+console.log("Age using let:", age);
+
+// 🔹 const → values that CANNOT change (immutable)
+const birthYear = 1996;
+// birthYear = 1997;  ❌ error: you can't reassign a const
+console.log("Birth Year (const):", birthYear);
+
+// 🔹 var → the old way (avoid it)
+// It has weird behavior because of function scope + hoisting
+var job = 'Developer';
+job = 'Senior Developer'; // allowed but risky
+console.log("Job using var:", job);
+
+// Why let/const is better:
+// - predictable behavior
+// - block scoped
+// - prevents bugs
+// - modern JS best practice
+
+// ===============================================
+// 🧩 Basic Operators
+// ===============================================
+
