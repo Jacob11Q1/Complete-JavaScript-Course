@@ -70,22 +70,60 @@ console.log("Age using let:", age);
 
 // 🔹 const → values that CANNOT change (immutable)
 const birthYear = 1996;
-// birthYear = 1997;  ❌ error: you can't reassign a const
+// birthYear = 1997;  ❌ error: cannot reassign const
 console.log("Birth Year (const):", birthYear);
 
 // 🔹 var → the old way (avoid it)
-// It has weird behavior because of function scope + hoisting
+// has function scope + hoisting issues
 var job = 'Developer';
 job = 'Senior Developer'; // allowed but risky
 console.log("Job using var:", job);
 
-// Why let/const is better:
-// - predictable behavior
-// - block scoped
-// - prevents bugs
-// - modern JS best practice
 
 // ===============================================
 // 🧩 Basic Operators
 // ===============================================
 
+// Math Operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+
+console.log(ageJonas, ageSarah);
+
+// More math
+console.log(
+  ageJonas * 2,
+  ageJonas / 2,
+  ageJonas + 2,
+  2 ** 3 // 2 to the power of 3 = 8
+);
+
+// String concatenation
+const firstNameJ = "Jacob";
+const lastName = "Qumsiyeh";
+console.log(firstNameJ + " " + lastName);
+
+// Assignment Operators
+let x = 10 + 5; // x = 15
+x += 10;  // x = 25
+x *= 4;   // x = 100
+x -= 6;   // x = 94
+x++;     // x = 95
+x--;     // x = 94
+console.log(x);
+
+// Comparison Operators
+console.log(ageJonas > ageSarah); // true
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+console.log(isFullAge);
+
+// Comparing expressions
+console.log(now - 1991 > now - 2018);
+
+
+// ===============================================
+// 🧩 Operator Precedence
+// ===============================================
