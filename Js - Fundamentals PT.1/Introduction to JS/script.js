@@ -1,145 +1,167 @@
-// ===============================================
-// 🧠 Introduction to JavaScript
-// ===============================================
+// // ===============================================
+// // 🧠 Introduction to JavaScript
+// // ===============================================
 
-// Run this step-by-step to understand how JS executes.
-// (Uncomment to test)
+// // Run this step-by-step to understand how JS executes.
+// // (Uncomment to test)
 
-// let js = 'amazing';
+// // let js = 'amazing';
 
-// if (js === 'amazing') {
-//   alert("JavaScript is FUN!");
-// }
+// // if (js === 'amazing') {
+// //   alert("JavaScript is FUN!");
+// // }
 
-// Log a simple calculation
-console.log("The Number is:", 48 + 28 + 23 - 10);
+// // Log a simple calculation
+// console.log("The Number is:", 48 + 28 + 23 - 10);
 
-// Welcome message
-console.log("Welcome To The JavaScript World!!!");
-
-
-// ===============================================
-// 🧩 Values and Variables
-// ===============================================
-
-// Direct values (not stored)
-console.log('Jacob');
-console.log(23);
-
-// Variables allow re-use and cleaner code
-let firstName = 'Jonas';
-console.log(firstName);
-
-// Valid variable examples
-let jonas_matilda = 'JM';  // underscores are allowed
-let $function = 27;        // $ is valid but rarely used
-let person = 'Jacob';      // simple variable
-let PI = 3.1415;           // constants usually uppercase
-
-// Descriptive variable names (best practice)
-let myFirstJob = 'Programmer';
-let myCurrentJob = 'Teacher';
-
-// ❌ Not recommended — unclear variable names
-let job1 = 'Programmer';
-let job2 = 'Teacher';
+// // Welcome message
+// console.log("Welcome To The JavaScript World!!!");
 
 
-// ===============================================
-// 🧩 Data Types
-// ===============================================
+// // ===============================================
+// // 🧩 Values and Variables
+// // ===============================================
 
-let javaScriptIsFun = true;
-console.log(javaScriptIsFun);
+// // Direct values printed to console
+// console.log('Jacob');
+// console.log(23);
 
-// typeof operator examples
-console.log(typeof true);               // boolean
-console.log(typeof javaScriptIsFun);    // boolean
-console.log(typeof 23);                 // number
-console.log(typeof 'Jacob');            // string
+// // Variables allow re-use and cleaner code
+// let firstNameVar = 'Jonas';       // person's first name
+// console.log(firstNameVar);
 
+// // Valid variable examples
+// let jonas_matilda = 'JM';         // underscore allowed
+// let $function = 27;               // $ allowed but not recommended
+// let personName = 'Jacob';         // descriptive variable
+// let PI_VALUE = 3.1415;            // constant values usually uppercase
 
-// ===============================================
-// 🧩 Let, Const, and Var
-// ===============================================
+// // Descriptive variable names
+// let myFirstJob = 'Programmer';    // first job title
+// let myCurrentJob = 'Teacher';     // current job title
 
-// 🔹 let → values that CAN change later (mutable)
-let age = 28;
-age = 29; // allowed (reassignment)
-console.log("Age using let:", age);
-
-// 🔹 const → values that CANNOT change (immutable)
-const birthYear = 1996;
-// birthYear = 1997;  ❌ error: cannot reassign const
-console.log("Birth Year (const):", birthYear);
-
-// 🔹 var → the old way (avoid it)
-// has function scope + hoisting issues
-var job = 'Developer';
-job = 'Senior Developer'; // allowed but risky
-console.log("Job using var:", job);
+// // ❌ Not recommended — unclear variable names
+// let job1 = 'Programmer';
+// let job2 = 'Teacher';
 
 
-// ===============================================
-// 🧩 Basic Operators
-// ===============================================
+// // ===============================================
+// // 🧩 Data Types
+// // ===============================================
 
-// You commented out the declarations, so JS will crash.
-// We define them properly *before* using them.
+// let javaScriptIsFun = true;        // boolean value
+// console.log(javaScriptIsFun);
 
-const now = 2037;                  // current year used for calculations
-const ageJonas = now - 1991;       // Jonas age
-const ageSarah = now - 2018;       // Sarah age
-
-// Math Operators
-console.log(ageJonas, ageSarah);
-
-// More math
-console.log(
-  ageJonas * 2,                   // multiply
-  ageJonas / 2,                   // divide
-  ageJonas + 2,                   // add
-  2 ** 3                          // exponent (2^3 = 8)
-);
-
-// String concatenation
-const firstNameJ = "Jacob";
-const lastName = "Qumsiyeh";
-console.log(firstNameJ + " " + lastName);
-
-// Assignment Operators
-let x = 10 + 5; // x = 15
-x += 10;        // x = 25
-x *= 4;         // x = 100
-x -= 6;         // x = 94
-x++;            // x = 95
-x--;            // x = 94
-console.log(x);
-
-// Comparison Operators
-console.log(ageJonas > ageSarah); // true
-console.log(ageSarah >= 18);      // true or false depending on age
-
-const isFullAge = ageSarah >= 18;
-console.log(isFullAge);
-
-// Comparing expressions
-console.log(now - 1991 > now - 2018);
+// // typeof operator examples
+// console.log(typeof true);               // boolean
+// console.log(typeof javaScriptIsFun);    // boolean
+// console.log(typeof 23);                 // number
+// console.log(typeof 'Jacob');            // string
 
 
-// ===============================================
-// 🧩 Operator Precedence
-// ===============================================
+// // ===============================================
+// // 🧩 Let, Const, and Var
+// // ===============================================
 
-// Math Operators and L → R evaluation
-console.log(25 - 10 - 5); // 10
-console.log(5 - 10 - 25); // -30
+// // 🔹 let → values that CAN change later (mutable)
+// let currentAge = 28;               // initial age
+// currentAge = 29;                   // reassigned
+// console.log("Age using let:", currentAge);
 
-let z, y;
-z = y = 25 - 10 - 5;  // evaluated as y = 10 then z = y
-console.log(z, y);
+// // 🔹 const → values that CANNOT change (immutable)
+// const birthYearConst = 1996;       // fixed birth year
+// console.log("Birth Year (const):", birthYearConst);
 
-// Average age
-const averageAge = (ageJonas + ageSarah) / 2;
-console.log(ageJonas, ageSarah, averageAge);
+// // 🔹 var → the old way (avoid it due to hoisting/scope issues)
+// var jobTitle = 'Developer';
+// jobTitle = 'Senior Developer';      // var allows reassignment but is old-school
+// console.log("Job using var:", jobTitle);
 
+
+// // ===============================================
+// // 🧩 Basic Operators
+// // ===============================================
+
+// // Defining constants for calculations
+// const currentYearCalc = 2037;                  // hypothetical current year
+// const ageJonasCalc = currentYearCalc - 1991;   // Jonas' age
+// const ageSarahCalc = currentYearCalc - 2018;   // Sarah's age
+
+// // Math Operators
+// console.log(ageJonasCalc, ageSarahCalc);
+
+// // More math examples
+// console.log(
+//   ageJonasCalc * 2,                   // multiplication
+//   ageJonasCalc / 2,                   // division
+//   ageJonasCalc + 2,                   // addition
+//   2 ** 3                              // exponent (2^3 = 8)
+// );
+
+// // String concatenation (old way)
+// const concatFirstName = "Jacob";
+// const concatLastName = "Qumsiyeh";
+// console.log(concatFirstName + " " + concatLastName);
+
+// // Assignment Operators
+// let xValue = 10 + 5; // xValue = 15
+// xValue += 10;        // xValue = 25
+// xValue *= 4;         // xValue = 100
+// xValue -= 6;         // xValue = 94
+// xValue++;            // xValue = 95
+// xValue--;            // xValue = 94
+// console.log(xValue);
+
+// // Comparison Operators
+// console.log(ageJonasCalc > ageSarahCalc); // true if Jonas is older
+// console.log(ageSarahCalc >= 18);          // checks if Sarah is adult
+
+// const isFullAgeVar = ageSarahCalc >= 18;  // boolean result stored
+// console.log(isFullAgeVar);
+
+// // Comparing expressions
+// console.log(currentYearCalc - 1991 > currentYearCalc - 2018);
+
+
+// // ===============================================
+// // 🧩 Operator Precedence
+// // ===============================================
+
+// // Math operators executed left-to-right
+// console.log(25 - 10 - 5); // 10
+// console.log(5 - 10 - 25); // -30
+
+// let zValue, yValue;
+// zValue = yValue = 25 - 10 - 5; // assignment right-to-left
+// console.log(zValue, yValue);
+
+// // Average age calculation
+// const avgAge = (ageJonasCalc + ageSarahCalc) / 2;
+// console.log(ageJonasCalc, ageSarahCalc, avgAge);
+
+
+// // ===============================================
+// // 🧩 Strings and Template Literals
+// // ===============================================
+
+// The old way ES5:
+const firstName = 'Jacob';                  // first name stored
+const job = 'Full Stack Developer';         // job title stored
+const birthYear = 1996;                     // birth year
+const year = 2025;                          // current year
+
+// Building a string with + (old and messy approach)
+const jacob =
+  "I'm " +
+  firstName +
+  ', a ' +
+  (year - birthYear) +                       // calculating age inside string
+  ' years old ' +
+  job +
+  "!";
+
+console.log(jacob);
+
+// Template Literals (modern ES6 way, clean and readable)
+const jacobNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jacobNew);
