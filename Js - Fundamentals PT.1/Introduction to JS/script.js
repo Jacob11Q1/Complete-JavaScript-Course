@@ -31,12 +31,12 @@ let firstName = 'Jonas';
 console.log(firstName);
 
 // Valid variable examples
-let jonas_matilda = 'JM';
-let $function = 27;
-let person = 'Jacob';
-let PI = 3.1415; // constants usually uppercase
+let jonas_matilda = 'JM';  // underscores are allowed
+let $function = 27;        // $ is valid but rarely used
+let person = 'Jacob';      // simple variable
+let PI = 3.1415;           // constants usually uppercase
 
-// Descriptive variable names
+// Descriptive variable names (best practice)
 let myFirstJob = 'Programmer';
 let myCurrentJob = 'Teacher';
 
@@ -65,7 +65,7 @@ console.log(typeof 'Jacob');            // string
 
 // 🔹 let → values that CAN change later (mutable)
 let age = 28;
-age = 29; // allowed
+age = 29; // allowed (reassignment)
 console.log("Age using let:", age);
 
 // 🔹 const → values that CANNOT change (immutable)
@@ -84,19 +84,22 @@ console.log("Job using var:", job);
 // 🧩 Basic Operators
 // ===============================================
 
-// Math Operators
-const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
+// You commented out the declarations, so JS will crash.
+// We define them properly *before* using them.
 
+const now = 2037;                  // current year used for calculations
+const ageJonas = now - 1991;       // Jonas age
+const ageSarah = now - 2018;       // Sarah age
+
+// Math Operators
 console.log(ageJonas, ageSarah);
 
 // More math
 console.log(
-  ageJonas * 2,
-  ageJonas / 2,
-  ageJonas + 2,
-  2 ** 3 // 2 to the power of 3 = 8
+  ageJonas * 2,                   // multiply
+  ageJonas / 2,                   // divide
+  ageJonas + 2,                   // add
+  2 ** 3                          // exponent (2^3 = 8)
 );
 
 // String concatenation
@@ -106,16 +109,16 @@ console.log(firstNameJ + " " + lastName);
 
 // Assignment Operators
 let x = 10 + 5; // x = 15
-x += 10;  // x = 25
-x *= 4;   // x = 100
-x -= 6;   // x = 94
-x++;     // x = 95
-x--;     // x = 94
+x += 10;        // x = 25
+x *= 4;         // x = 100
+x -= 6;         // x = 94
+x++;            // x = 95
+x--;            // x = 94
 console.log(x);
 
 // Comparison Operators
 console.log(ageJonas > ageSarah); // true
-console.log(ageSarah >= 18);
+console.log(ageSarah >= 18);      // true or false depending on age
 
 const isFullAge = ageSarah >= 18;
 console.log(isFullAge);
@@ -127,3 +130,16 @@ console.log(now - 1991 > now - 2018);
 // ===============================================
 // 🧩 Operator Precedence
 // ===============================================
+
+// Math Operators and L → R evaluation
+console.log(25 - 10 - 5); // 10
+console.log(5 - 10 - 25); // -30
+
+let z, y;
+z = y = 25 - 10 - 5;  // evaluated as y = 10 then z = y
+console.log(z, y);
+
+// Average age
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge);
+
