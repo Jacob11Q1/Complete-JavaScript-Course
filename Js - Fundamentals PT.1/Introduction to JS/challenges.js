@@ -184,3 +184,77 @@ const overLimit = totalCalories > dailyCalorieLimit;
 // Logs
 console.log(`Your total intake today was ${totalCalories} calories.`);
 console.log(`Did you exceed your limit?`, overLimit);
+
+// ===============================================
+// CHALLENGE 11 — Personal Bio Upgrader (Variables + Template Literals)
+// ===============================================
+
+console.log("Welcome to your Bio.....");
+
+// Personal information variables
+let yourFirstName = "Anna";
+let yourLastName = "Mandora Lewis";
+
+const thisCurrentYear = 2025;
+
+// Age calculation (not birth year)
+let yourAge = thisCurrentYear - 1991;
+
+let yourCountry = "United Kingdom";
+let yourBirthPlace = "London";
+let yourFavSport = "F1";
+
+// Correct variable declaration
+let yourJob = "Full Stack Developer";
+
+// Final bio output using template literals
+console.log(`My name is ${yourFirstName} ${yourLastName}, 
+and I am ${yourAge} years old, from ${yourCountry}, born in ${yourBirthPlace}.
+My favorite sport is ${yourFavSport}, and I work as a ${yourJob}.`);
+
+// ===============================================
+// CHALLENGE 12 — Lifestyle Stats Calculator (Math + Template Literals)
+// ===============================================
+
+console.log("This is your Sleeping Tracker System....");
+console.log("Hope You Enjoy It!");
+
+let yourName = "Hanna";
+let todayMood = "Happy";
+let yesterdayMood = "Tired";
+let hoursSlept = 4;
+let hoursNeeded = 10;
+
+// Calculate how many hours are missing
+let sleepDifference = hoursNeeded - hoursSlept;
+
+// Final output (clean formatting + correct grammar)
+console.log(
+    `${yourName} feels ${todayMood} today.\n` +
+    `Yesterday they felt ${yesterdayMood}.\n` +
+    `They slept ${hoursSlept} hours and needed ${hoursNeeded}, meaning they are ${sleepDifference} hours short.`
+);
+
+// ===============================================
+// CHALLENGE 13 — Daily Expense Tracker (Math + Template Literals + Variables)
+// ===============================================
+console.log("Your Expense Tracker System......");
+
+// Individual expenses
+let coffeeCost = 27;
+let transportCost = 26;
+let lunchCost = 54;
+let snackCost = 32;
+let miscCost = 80;
+
+// Daily spending limit
+const spendingLimit = 250;
+
+// Total money spent today
+let totalSpent = coffeeCost + transportCost + lunchCost + snackCost + miscCost;
+
+// Money remaining from the limit
+let remainingBalance = spendingLimit - totalSpent;
+
+// Final summary output
+console.log(`Today you spent ${totalSpent} shekels. Your daily limit is ${spendingLimit}, which means you still have ${remainingBalance} shekels left from your budget.`);
