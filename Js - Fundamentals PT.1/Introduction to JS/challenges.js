@@ -103,23 +103,23 @@ console.log(x);
 // ===============================================
 
 // Heights **must** be in meters
-const massMark = 78;
-const heightMark = 1.69;
+// const massMark = 78;
+// const heightMark = 1.69;
 
-const massJohn = 92;
-const heightJohn = 1.95;
+// const massJohn = 92;
+// const heightJohn = 1.95;
 
-// BMI calculations
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+// // BMI calculations
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-// Logging BMI results
-console.log("Mark BMI:", BMIMark);
-console.log("John BMI:", BMIJohn);
+// // Logging BMI results
+// console.log("Mark BMI:", BMIMark);
+// console.log("John BMI:", BMIJohn);
 
-// Boolean: Who has higher BMI?
-const markHigherBMI = BMIMark > BMIJohn;
-console.log("Is Mark's BMI higher?", markHigherBMI);
+// // Boolean: Who has higher BMI?
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log("Is Mark's BMI higher?", markHigherBMI);
 
 
 // ===============================================
@@ -258,3 +258,73 @@ let remainingBalance = spendingLimit - totalSpent;
 
 // Final summary output
 console.log(`Today you spent ${totalSpent} shekels. Your daily limit is ${spendingLimit}, which means you still have ${remainingBalance} shekels left from your budget.`);
+
+
+// ===============================================
+// CHALLENGE 14 — Age Gate + Template Literal (IF/ELSE)
+// ===============================================
+
+let personName = "Jacob";
+let personAge = 17;
+const isOldEnough = 18 - personAge;
+
+if (personAge >= 18) {
+    console.log(`${personName} is ${personAge} years old and is allowed to enter the club`);
+} else {
+    console.log(`${personName} is too young to enter the club. You must wait ${isOldEnough} years.`);
+}
+
+// ===============================================
+// CHALLENGE 15 — Movie Rating Judge (IF/ELSE + Template Literals)
+// ===============================================
+
+let movieRating = 8.7;
+if (movieRating >= 8) {
+    console.log(`This movie is Amazing! It's Rating: ${movieRating}`);
+} else if (movieRating >= 5 && movieRating < 8) {
+    console.log(`This movie is Decent. It's Rating: ${movieRating}`);
+} else {
+    console.log(`This movie is very bad. It's Rating: ${movieRating}`);
+}
+
+// ===============================================
+// CHALLENGE 16 — Calorie Check 2.0 (Math + IF/ELSE)
+// ===============================================
+
+let breakfastMeal = 850;
+let lunchMeal = 600;
+let dinnerMeal = 800;
+let snack = 850;
+
+let totalCaloriesToday = breakfastMeal + lunchMeal + dinnerMeal + snack;
+const todayLimit = 2500;
+
+let overLimitAmount = totalCaloriesToday - todayLimit;
+let underLimitAmount = todayLimit - totalCaloriesToday;
+
+if (totalCaloriesToday > todayLimit) {
+    console.log(`You ate too much! Over limit by ${overLimitAmount} calories.`);
+} else {
+    console.log(`Great job! You are under the limit by ${underLimitAmount} calories.`);
+}
+
+
+// ===============================================
+// CHALLENGE 17 — BMI Checker 2.0 (IF/ELSE + Template Literals)
+// ===============================================
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark, BMIJohn);
+
+if (BMIJohn > BMIMark) {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+} else {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+}

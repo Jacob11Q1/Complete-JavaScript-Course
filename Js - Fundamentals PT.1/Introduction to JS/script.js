@@ -145,23 +145,70 @@
 // // ===============================================
 
 // The old way ES5:
-const firstName = 'Jacob';                  // first name stored
-const job = 'Full Stack Developer';         // job title stored
-const birthYear = 1996;                     // birth year
-const year = 2025;                          // current year
+// const firstName = 'Jacob';                  // first name stored
+// const job = 'Full Stack Developer';         // job title stored
+// const birthYear = 1996;                     // birth year
+// const year = 2025;                          // current year
 
-// Building a string with + (old and messy approach)
-const jacob =
-  "I'm " +
-  firstName +
-  ', a ' +
-  (year - birthYear) +                       // calculating age inside string
-  ' years old ' +
-  job +
-  "!";
+// // Building a string with + (old and messy approach)
+// const jacob =
+//   "I'm " +
+//   firstName +
+//   ', a ' +
+//   (year - birthYear) +                       // calculating age inside string
+//   ' years old ' +
+//   job +
+//   "!";
 
-console.log(jacob);
+// console.log(jacob);
 
-// Template Literals (modern ES6 way, clean and readable)
-const jacobNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
-console.log(jacobNew);
+// // Template Literals (modern ES6 way, clean and readable)
+// const jacobNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+// console.log(jacobNew);
+
+
+// // ===============================================
+// // 🧩 Taking Descisions: If/Else Statements
+// // ===============================================
+
+const herAge = 15;
+
+if (herAge >= 18) {
+  console.log("Sarah can start her driving license");
+} else{
+  const yearsLeft = 18 - herAge;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`); 
+}
+
+const birthYear = 1991;
+
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(`You were born in the ${century}th century.`);
+
+// Challenge #2:
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark, BMIJohn);
+
+// Compare BMIs
+if (BMIJohn > BMIMark) {
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+} else {
+  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+}
+
+console.log(`Mark's BMI (${BMIJohn}) is higher than John's (${BMIMark})!`);
