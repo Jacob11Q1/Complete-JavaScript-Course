@@ -229,8 +229,37 @@ console.log(n);
 
 
 // ===============================================
-// 🧩 Equality Operations: == VS ===
+// 🧩 EQUALITY OPERATIONS: == VS ===
 // ===============================================
-const age = 18;
-if(age === 18) console.log("You just become an adult..");
 
+// Strict vs Loose Comparison
+const age = '18';
+
+// Strict (checks type + value) ✅
+if (age === 18) {
+  console.log("You just became an adult. :D (strict)");
+}
+
+// Loose (converts types automatically) ⚠️
+if (age == 18) {
+  console.log("You just became an adult. :D (loose)");
+}
+
+
+// User input always comes as STRING
+const favourite = prompt("What is your favourite number?");
+const favouriteNumber = Number(favourite); // Explicit conversion ✅
+
+console.log(favouriteNumber);
+console.log(typeof favouriteNumber);
+
+// Always compare numbers with numbers
+if (favouriteNumber === 23) {
+  console.log("Cool! 23 is an amazing number!");
+} else if (favouriteNumber === 7) {
+  console.log("7 is also a great number!");
+} else if (Number.isNaN(favouriteNumber)) {
+  console.log("Bro… that's not even a number 😅");
+} else {
+  console.log("Number is not 23 or 7");
+}
