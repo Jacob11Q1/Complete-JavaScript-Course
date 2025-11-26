@@ -1,214 +1,236 @@
-// // ===============================================
-// // 🧠 Introduction to JavaScript
-// // ===============================================
+// ===============================================
+// 🧠 INTRODUCTION TO JAVASCRIPT
+// ===============================================
 
-// // Run this step-by-step to understand how JS executes.
-// // (Uncomment to test)
+// Run this step-by-step to understand execution flow
+// (Uncomment to test)
 
-// // let js = 'amazing';
+// let js = 'amazing';
 
-// // if (js === 'amazing') {
-// //   alert("JavaScript is FUN!");
-// // }
+// if (js === 'amazing') {
+//   alert("JavaScript is FUN!");
+// }
 
-// // Log a simple calculation
-// console.log("The Number is:", 48 + 28 + 23 - 10);
+// Log a basic calculation to console
+console.log("The Number is:", 48 + 28 + 23 - 10);
 
-// // Welcome message
-// console.log("Welcome To The JavaScript World!!!");
-
-
-// // ===============================================
-// // 🧩 Values and Variables
-// // ===============================================
-
-// // Direct values printed to console
-// console.log('Jacob');
-// console.log(23);
-
-// // Variables allow re-use and cleaner code
-// let firstNameVar = 'Jonas';       // person's first name
-// console.log(firstNameVar);
-
-// // Valid variable examples
-// let jonas_matilda = 'JM';         // underscore allowed
-// let $function = 27;               // $ allowed but not recommended
-// let personName = 'Jacob';         // descriptive variable
-// let PI_VALUE = 3.1415;            // constant values usually uppercase
-
-// // Descriptive variable names
-// let myFirstJob = 'Programmer';    // first job title
-// let myCurrentJob = 'Teacher';     // current job title
-
-// // ❌ Not recommended — unclear variable names
-// let job1 = 'Programmer';
-// let job2 = 'Teacher';
+// Welcome message
+console.log("Welcome To The JavaScript World!!!");
 
 
-// // ===============================================
-// // 🧩 Data Types
-// // ===============================================
+// ===============================================
+// 🧩 VALUES AND VARIABLES
+// ===============================================
 
-// let javaScriptIsFun = true;        // boolean value
-// console.log(javaScriptIsFun);
+// Direct values
+console.log('Jacob');
+console.log(23);
 
-// // typeof operator examples
-// console.log(typeof true);               // boolean
-// console.log(typeof javaScriptIsFun);    // boolean
-// console.log(typeof 23);                 // number
-// console.log(typeof 'Jacob');            // string
+// Variables make code reusable and readable
+let firstNameVar = 'Jonas';
+console.log(firstNameVar);
 
+// Valid variable naming
+let jonas_matilda = 'JM';       // underscore allowed
+let $function = 27;             // valid but not recommended
+let personName = 'Jacob';       // descriptive naming
+let PI_VALUE = 3.1415;          // constants usually uppercase
 
-// // ===============================================
-// // 🧩 Let, Const, and Var
-// // ===============================================
+// Descriptive is always better than vague
+let myFirstJob = 'Programmer';
+let myCurrentJob = 'Teacher';
 
-// // 🔹 let → values that CAN change later (mutable)
-// let currentAge = 28;               // initial age
-// currentAge = 29;                   // reassigned
-// console.log("Age using let:", currentAge);
-
-// // 🔹 const → values that CANNOT change (immutable)
-// const birthYearConst = 1996;       // fixed birth year
-// console.log("Birth Year (const):", birthYearConst);
-
-// // 🔹 var → the old way (avoid it due to hoisting/scope issues)
-// var jobTitle = 'Developer';
-// jobTitle = 'Senior Developer';      // var allows reassignment but is old-school
-// console.log("Job using var:", jobTitle);
+// ❌ Avoid unclear names in real projects
+let job1 = 'Programmer';
+let job2 = 'Teacher';
 
 
-// // ===============================================
-// // 🧩 Basic Operators
-// // ===============================================
+// ===============================================
+// 🧩 DATA TYPES
+// ===============================================
 
-// // Defining constants for calculations
-// const currentYearCalc = 2037;                  // hypothetical current year
-// const ageJonasCalc = currentYearCalc - 1991;   // Jonas' age
-// const ageSarahCalc = currentYearCalc - 2018;   // Sarah's age
+let javaScriptIsFun = true;
+console.log(javaScriptIsFun);
 
-// // Math Operators
-// console.log(ageJonasCalc, ageSarahCalc);
-
-// // More math examples
-// console.log(
-//   ageJonasCalc * 2,                   // multiplication
-//   ageJonasCalc / 2,                   // division
-//   ageJonasCalc + 2,                   // addition
-//   2 ** 3                              // exponent (2^3 = 8)
-// );
-
-// // String concatenation (old way)
-// const concatFirstName = "Jacob";
-// const concatLastName = "Qumsiyeh";
-// console.log(concatFirstName + " " + concatLastName);
-
-// // Assignment Operators
-// let xValue = 10 + 5; // xValue = 15
-// xValue += 10;        // xValue = 25
-// xValue *= 4;         // xValue = 100
-// xValue -= 6;         // xValue = 94
-// xValue++;            // xValue = 95
-// xValue--;            // xValue = 94
-// console.log(xValue);
-
-// // Comparison Operators
-// console.log(ageJonasCalc > ageSarahCalc); // true if Jonas is older
-// console.log(ageSarahCalc >= 18);          // checks if Sarah is adult
-
-// const isFullAgeVar = ageSarahCalc >= 18;  // boolean result stored
-// console.log(isFullAgeVar);
-
-// // Comparing expressions
-// console.log(currentYearCalc - 1991 > currentYearCalc - 2018);
+// typeof operator
+console.log(typeof true);
+console.log(typeof javaScriptIsFun);
+console.log(typeof 23);
+console.log(typeof 'Jacob');
 
 
-// // ===============================================
-// // 🧩 Operator Precedence
-// // ===============================================
+// ===============================================
+// 🧩 LET, CONST & VAR
+// ===============================================
 
-// // Math operators executed left-to-right
-// console.log(25 - 10 - 5); // 10
-// console.log(5 - 10 - 25); // -30
+// let → changeable
+let currentAge = 28;
+currentAge = 29;
+console.log("Age using let:", currentAge);
 
-// let zValue, yValue;
-// zValue = yValue = 25 - 10 - 5; // assignment right-to-left
-// console.log(zValue, yValue);
+// const → constant (cannot be reassigned)
+const birthYearConst = 1996;
+console.log("Birth Year (const):", birthYearConst);
 
-// // Average age calculation
-// const avgAge = (ageJonasCalc + ageSarahCalc) / 2;
-// console.log(ageJonasCalc, ageSarahCalc, avgAge);
-
-
-// // ===============================================
-// // 🧩 Strings and Template Literals
-// // ===============================================
-
-// The old way ES5:
-// const firstName = 'Jacob';                  // first name stored
-// const job = 'Full Stack Developer';         // job title stored
-// const birthYear = 1996;                     // birth year
-// const year = 2025;                          // current year
-
-// // Building a string with + (old and messy approach)
-// const jacob =
-//   "I'm " +
-//   firstName +
-//   ', a ' +
-//   (year - birthYear) +                       // calculating age inside string
-//   ' years old ' +
-//   job +
-//   "!";
-
-// console.log(jacob);
-
-// // Template Literals (modern ES6 way, clean and readable)
-// const jacobNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
-// console.log(jacobNew);
+// var → legacy, avoid in modern code
+var jobTitle = 'Developer';
+jobTitle = 'Senior Developer';
+console.log("Job using var:", jobTitle);
 
 
-// // ===============================================
-// // 🧩 Taking Descisions: If/Else Statements
-// // ===============================================
+// ===============================================
+// 🧩 BASIC OPERATORS
+// ===============================================
+
+const currentYearCalc = 2037;
+const ageJonasCalc = currentYearCalc - 1991;
+const ageSarahCalc = currentYearCalc - 2018;
+
+// Math operations
+console.log(ageJonasCalc, ageSarahCalc);
+
+console.log(
+  ageJonasCalc * 2,
+  ageJonasCalc / 2,
+  ageJonasCalc + 2,
+  2 ** 3
+);
+
+// String concatenation
+const concatFirstName = "Jacob";
+const concatLastName = "Qumsiyeh";
+console.log(concatFirstName + " " + concatLastName);
+
+// Assignment operators
+let xValue = 10 + 5;
+xValue += 10;
+xValue *= 4;
+xValue -= 6;
+xValue++;
+xValue--;
+console.log(xValue);
+
+// Comparison operators
+console.log(ageJonasCalc > ageSarahCalc);
+console.log(ageSarahCalc >= 18);
+
+const isFullAgeVar = ageSarahCalc >= 18;
+console.log(isFullAgeVar);
+
+// Expressions
+console.log(currentYearCalc - 1991 > currentYearCalc - 2018);
+
+
+// ===============================================
+// 🧩 OPERATOR PRECEDENCE
+// ===============================================
+
+console.log(25 - 10 - 5);
+console.log(5 - 10 - 25);
+
+let zValue, yValue;
+zValue = yValue = 25 - 10 - 5;
+console.log(zValue, yValue);
+
+const avgAge = (ageJonasCalc + ageSarahCalc) / 2;
+console.log(ageJonasCalc, ageSarahCalc, avgAge);
+
+
+// ===============================================
+// 🧩 STRINGS & TEMPLATE LITERALS
+// ===============================================
+
+// ES5 way
+const firstName = 'Jacob';
+const job = 'Full Stack Developer';
+const birthYear = 1996;
+const year = 2025;
+
+const jacob =
+  "I'm " +
+  firstName +
+  ', a ' +
+  (year - birthYear) +
+  ' years old ' +
+  job +
+  "!";
+
+console.log(jacob);
+
+// ES6 Template Literal
+const jacobNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(jacobNew);
+
+
+// ===============================================
+// 🧩 DECISION MAKING (IF / ELSE)
+// ===============================================
 
 const herAge = 15;
 
 if (herAge >= 18) {
   console.log("Sarah can start her driving license");
-} else{
+} else {
   const yearsLeft = 18 - herAge;
-  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`); 
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years 🙂`);
 }
 
-const birthYear = 1991;
-
+const birthYearCheck = 1991;
 let century;
 
-if (birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
-}
+if (birthYearCheck <= 2000) century = 20;
+else century = 21;
 
 console.log(`You were born in the ${century}th century.`);
 
-// Challenge #2:
+// Challenge #2
 
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
 const heightJohn = 1.95;
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / heightJohn ** 2;
 
 console.log(BMIMark, BMIJohn);
 
-// Compare BMIs
 if (BMIJohn > BMIMark) {
-  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+  console.log(`John's BMI (${BMIJohn.toFixed(2)}) is higher than Mark's (${BMIMark.toFixed(2)})!`);
 } else {
-  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+  console.log(`Mark's BMI (${BMIMark.toFixed(2)}) is higher than John's (${BMIJohn.toFixed(2)})!`);
 }
 
-console.log(`Mark's BMI (${BMIJohn}) is higher than John's (${BMIMark})!`);
+
+// ===============================================
+// 🧩 TYPE CONVERSION & COERCION
+// ===============================================
+
+// Explicit conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jacob')); 
+console.log(typeof NaN);      
+
+// Convert number to string
+console.log(String(23), 23);
+
+// Type coercion
+console.log('I am ' + 23 + ' years old');
+console.log('23' - '10' - 3);
+console.log('23' / '2');
+
+// Mini brain-twister
+let n = '1' + 1;  // '11'
+n = n - 1;        // 10
+console.log(n);
+
+
+// ===============================================
+// 🧩 Equality Operations: == VS ===
+// ===============================================
+const age = 18;
+if(age === 18) console.log("You just become an adult..");
+
